@@ -28,9 +28,14 @@ export function Header (){
                     <option value="Grade 4">Grade 4</option>
                     <option value="Grade 5">Grade 5</option>
                     <option value="Grade 6">Grade 6</option>
+
                 </select>
             </div>
+            <div className="text-center mb-1">
+                <button className="btn btn-primary">Surprise Me!</button>
+                </div>
         </div>
+        
 
         <div className="row mb-4">
             <div className="col-md-6">

@@ -2,6 +2,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from './components/header';
+import { useState } from "react";
+import experiments from "./data/mockData"
 import {ExperimentCard} from './components/ExperimentCard'
 function App() {
   
@@ -9,10 +11,17 @@ function App() {
   return (
       <>
       <Header/>
-      <div className="text-center mb-5">
-        <button className="btn btn-primary btn-lg">Surprise Me!</button>
-      </div>
-      <ExperimentCard/>
+      {experiments.map(experiment => (
+        <ExperimentCard
+          key={experiment.id}
+          id={experiment.id}
+          title={experiment.title}
+          grade={experiment.grade}
+          description={experiment.description}
+          imageURL={experiment.imageURL}
+            />
+
+      ))}
 
       {/* ... other components like ExperimentCard ... */}
 
